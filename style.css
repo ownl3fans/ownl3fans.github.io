@@ -1,0 +1,87 @@
+/* === Общие стили === */
+body {
+    margin: 0;
+    padding: 0;
+    background: url('Images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+}
+
+/* === Хедер === */
+.header {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo .ap {
+    color: #00ccff;
+    margin-right: 10px;
+}
+
+/* === Карточки === */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 60px 20px;
+    gap: 40px;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px 40px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+/* 3D Hover с движением мыши */
+.card:hover {
+    transform: rotateX(10deg) rotateY(10deg) scale(1.03);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+.card:active {
+    transform: scale(0.97);
+}
+
+/* === Аватарки === */
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid #fff;
+}
+
+/* === Иконки соцсетей === */
+.icons {
+    margin-top: 15px;
+}
+
+.icons img {
+    width: 32px;
+    height: 32px;
+    margin: 0 8px;
+    transition: transform 0.2s ease;
+}
+
+.icons img:hover {
+    transform: scale(1.2);
+}
