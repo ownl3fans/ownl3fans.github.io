@@ -17,8 +17,9 @@ body, html {
 .platform {
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(100px);
-  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Для Safari и iOS */
+  background-color: rgba(0, 0, 0, 0.4); /* Прозрачный тёмный фон */
   display: flex;
   flex-direction: column;
   align-items: center;
