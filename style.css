@@ -30,11 +30,12 @@ body, html {
 
 /* === Header / Logo === */
 header {
-  width: 100%;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: center;
-  padding: 20px;
-  position: static;
+  align-items: center;
 }
 
 .logo {
@@ -56,7 +57,7 @@ header {
 }
 
 .logo-ap {
-  color: #00aaff;
+  color: #00aaff; 
   margin-right: 5px;
 }
 
@@ -72,14 +73,12 @@ main {
   height: 100%;
   gap: 50px;
   flex-wrap: wrap;
-  padding: 20px;
 }
 
 /* === Card === */
 .card {
-  width: 100%;
-  max-width: 370px;
-  aspect-ratio: 4 / 3; /* <<< вот это добавлено */
+  width: 370px;
+  height: 310px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -97,7 +96,6 @@ main {
   align-items: center;
   justify-content: flex-start;
 }
-
 
 .card:hover {
   transform: scale(1.02);
@@ -175,37 +173,19 @@ h2, .role {
   transition: opacity 0.5s ease;
 }
 
-/* === Responsive Fix === */
+/* === Responsive Fix (только шапка, не трогаем layout карточек) === */
 @media (max-width: 768px) {
-  main {
-    flex-direction: column;
-    gap: 30px;
-    padding: 20px;
-  }
-
-  .card {
-    width: 95%;
-    max-width: 380px;
-    height: auto;
-  }
-
   header {
     flex-direction: column;
-    align-items: center;
-    padding: 15px 10px;
+    top: 20px;
   }
 
   .logo {
     font-size: 18px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
   }
 
   .logo-icon {
     width: 28px;
     height: 28px;
-    margin-bottom: 5px;
   }
 }
