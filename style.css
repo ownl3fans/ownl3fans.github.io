@@ -30,12 +30,11 @@ body, html {
 
 /* === Header / Logo === */
 header {
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: static;
 }
 
 .logo {
@@ -73,6 +72,7 @@ main {
   height: 100%;
   gap: 50px;
   flex-wrap: wrap;
+  padding: 20px;
 }
 
 /* === Card === */
@@ -178,21 +178,28 @@ h2, .role {
   }
 
   .card {
-    width: 90%;
+    width: 95%;
+    max-width: 380px;
     height: auto;
   }
 
   header {
     flex-direction: column;
-    top: 20px;
+    align-items: center;
+    padding: 15px 10px;
   }
 
   .logo {
     font-size: 18px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
   }
 
   .logo-icon {
     width: 28px;
     height: 28px;
+    margin-bottom: 5px;
   }
 }
