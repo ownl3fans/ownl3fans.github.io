@@ -70,12 +70,12 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  gap: 50px;
   flex-wrap: wrap;
+  gap: 50px;
+  padding: 20px;
 }
 
-/* === Card === */
+/* Карточка */
 .card {
   width: 370px;
   height: 310px;
@@ -91,10 +91,6 @@ main {
   overflow: hidden;
   color: white;
   transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
 }
 
 .card:hover {
@@ -173,12 +169,20 @@ h2, .role {
   transition: opacity 0.5s ease;
 }
 
-/* === Responsive Fix (только шапка, не трогаем layout карточек) === */
+/* Мобильная адаптация — оставляем размеры */
 @media (max-width: 768px) {
-  header {
+  main {
     flex-direction: column;
-    top: 20px;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
   }
+
+  .card {
+    width: 370px;
+    height: 310px;
+  }
+}
 
   .logo {
     font-size: 18px;
@@ -188,4 +192,3 @@ h2, .role {
     width: 28px;
     height: 28px;
   }
-}
