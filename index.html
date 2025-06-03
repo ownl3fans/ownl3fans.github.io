@@ -65,10 +65,10 @@
   <script>
     (function() {
       const ua = navigator.userAgent || '';
-      const isTelegram = ua.toLowerCase().includes('telegram');
-      const isMobile = /android|iphone|ipad|ipod|mobile/i.test(ua);
+      const isMobile = /android|iphone|ipad|ipod/i.test(ua);
+      const isTelegramWebView = isMobile && ua.toLowerCase().includes('telegram');
 
-      if (isTelegram && isMobile) {
+      if (isTelegramWebView) {
         document.getElementById('telegram-block').style.display = 'flex';
         document.getElementById('main-content').style.display = 'none';
       }
