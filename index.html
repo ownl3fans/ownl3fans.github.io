@@ -1,40 +1,16 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agency Paranoia</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    #telegram-block {
-      display: none;
-      background-color: black;
-      color: white;
-      font-family: Arial, sans-serif;
-      height: 100vh;
-      margin: 0;
-      padding: 0 20px;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-  </style>
 </head>
 <body>
-  <div id="telegram-block">
-    <h1>❌ ОШИБКА</h1>
-    <p>ОТКРОЙТЕ САЙТ В НОРМАЛЬНОМ БРАУЗЕРЕ<br>Telegram WebView на мобильном заблокирован</p>
-  </div>
-
-  <div id="main-content">
+  <div class="platform">
     <header>
       <div class="logo">
-        <a href="https://t.me/+exyteZESq-xmZTYy" target="_blank">
-          <img src="Images/telegram.png" class="logo-icon" />
-        </a>
+        <a href="https://t.me/+exyteZESq-xmZTYy" target="_blank"><img src="Images/telegram.png" class="logo-icon" /></a>
         <span class="logo-ap">AP</span><span class="logo-text">agency paranoia</span>
       </div>
     </header>
@@ -61,19 +37,6 @@
       </div>
     </main>
   </div>
-
-  <script>
-    (function() {
-      const ua = navigator.userAgent || '';
-      const isMobile = /android|iphone|ipad|ipod/i.test(ua);
-      const isTelegramWebView = isMobile && ua.toLowerCase().includes('telegram');
-
-      if (isTelegramWebView) {
-        document.getElementById('telegram-block').style.display = 'flex';
-        document.getElementById('main-content').style.display = 'none';
-      }
-    })();
-  </script>
 
   <script src="script.js"></script>
 </body>
