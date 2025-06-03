@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>agency paranoia</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agency Paranoia</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header class="header">
-        <div class="logo"><span class="ap">AP</span> agency paranoia</div>
+  <div class="platform">
+    <header>
+      <div class="logo">
+        <a href="https://t.me/+exyteZESq-xmZTYy" target="_blank"><img src="Images/telegram.png" class="logo-icon" /></a>
+        <span class="logo-ap">AP</span><span class="logo-text">agency paranoia</span>
+      </div>
     </header>
 
-    <main class="container">
-        <div class="card">
-            <img src="images/paranoier.jpg" alt="paranoier avatar" class="avatar">
-            <h2>paranoier</h2>
-            <p>owner | coder</p>
-            <div class="icons">
-                <a href="https://discordid.netlify.app/?id=1279217258018902128" target="_blank">
-                    <img src="images/discord.png" alt="Discord">
-                </a>
-                <a href="https://t.me/paranoier" target="_blank">
-                    <img src="images/telegram.png" alt="Telegram">
-                </a>
-            </div>
+    <main>
+      <div class="card" onclick="handleClick(this, 'paranoier')">
+        <img class="avatar" src="Images/paranoier.jpg" alt="paranoier" />
+        <h2>paranoier</h2>
+        <div class="role">owner | coder</div>
+        <div class="icons">
+          <a href="https://discordid.netlify.app/?id=1279217258018902128" target="_blank"><img src="Images/discord.png" width="32" /></a>
+          <a href="https://t.me/paranoier" target="_blank"><img src="Images/telegram.png" width="32" /></a>
         </div>
-        <div class="card">
-            <img src="images/mortmode.jpg" alt="mortmode avatar" class="avatar">
-            <h2>mortmode</h2>
-            <p>co-owner | leader</p>
-            <div class="icons">
-                <a href="discord://users/1185238224797433858" target="_blank">
-                    <img src="images/discord.png" alt="Discord">
-                </a>
-                <a href="https://t.me/mortmode" target="_blank">
-                    <img src="images/telegram.png" alt="Telegram">
-                </a>
-            </div>
+      </div>
+
+      <div class="card" onclick="handleClick(this, 'mortmode')">
+        <img class="avatar" src="Images/mortmode.jpg" alt="mortmode" />
+        <h2>mortmode</h2>
+        <div class="role">co-owner | troll</div>
+        <div class="icons">
+          <a href="https://discordid.netlify.app/?id=1185238224797433858" target="_blank"><img src="Images/discord.png" width="32" /></a>
+          <a href="https://t.me/mortmode" target="_blank"><img src="Images/telegram.png" width="32" /></a>
         </div>
+      </div>
     </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
