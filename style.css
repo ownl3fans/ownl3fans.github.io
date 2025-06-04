@@ -13,26 +13,22 @@ body, html {
 }
 
 .platform {
-  width: 100%;
-  height: 100%;
+  min-height: 100vh;
   backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
+  justify-content: flex-start;
+  padding: 20px 10px;
+  position: relative;
 }
 
 header {
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .logo {
@@ -73,13 +69,12 @@ main {
 
 .card {
   width: 370px;
-  height: 310px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
   padding: 20px;
   position: relative;
@@ -162,6 +157,7 @@ h2, .role {
   transition: opacity 0.5s ease;
 }
 
+/* Адаптация для планшетов и телефонов */
 @media (max-width: 768px) {
   main {
     flex-direction: column;
@@ -175,17 +171,38 @@ h2, .role {
     height: auto;
   }
 
-  header {
-    flex-direction: column;
-    top: 20px;
-  }
-
   .logo {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .logo-icon {
     width: 28px;
     height: 28px;
+  }
+}
+
+/* Дополнительная адаптация для очень узких экранов */
+@media (max-width: 480px) {
+  .card {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  h2, .role {
+    font-size: 16px;
+  }
+
+  .icons a img {
+    width: 24px;
+  }
+
+  .typing {
+    font-size: 13px;
   }
 }
