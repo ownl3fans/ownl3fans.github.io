@@ -162,30 +162,37 @@ h2, .role {
   transition: opacity 0.5s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   main {
     flex-direction: column;
+    align-items: center;
     gap: 20px;
     padding: 20px;
   }
 
   .card {
-    width: 90%;
-    max-width: 370px;
+    width: 98vw; /* СТАЛО ШИРЕ (было 92vw) */
+    aspect-ratio: 4 / 3;
     height: auto;
   }
 
+  .avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  /* ЛОГОТИП ВЫШЕ */
   header {
     flex-direction: column;
-    top: 20px;
+    top: 10px; /* Было 20px — теперь выше */
   }
 
   .logo {
-    font-size: 18px;
+    font-size: 18px; /* Чуть увеличим тоже */
   }
 
   .logo-icon {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
   }
 }
