@@ -10,6 +10,7 @@ body, html {
   background: url('Images/bg.jpg') no-repeat center center fixed;
   background-size: cover;
   color: white;
+  overflow-x: hidden;
 }
 
 .platform {
@@ -21,7 +22,6 @@ body, html {
   align-items: center;
   justify-content: flex-start;
   padding: 20px 10px;
-  position: relative;
 }
 
 header {
@@ -69,6 +69,7 @@ main {
 
 .card {
   width: 370px;
+  height: 310px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -117,7 +118,7 @@ h2, .role {
   position: absolute;
   top: 20px;
   left: 20px;
-  width: 90%;
+  width: calc(100% - 40px);
   font-weight: bold;
   font-family: 'Arial Black', Arial, sans-serif;
   white-space: pre-wrap;
@@ -129,6 +130,7 @@ h2, .role {
   caret-color: transparent;
   text-align: left;
   transition: opacity 0.5s ease;
+  font-size: 14px;
 }
 
 .typing.typing-in {
@@ -157,35 +159,19 @@ h2, .role {
   transition: opacity 0.5s ease;
 }
 
-/* Адаптация для планшетов и телефонов */
+/* ========= 📱 МОБИЛКА (до 768px) ========= */
 @media (max-width: 768px) {
   main {
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+    align-items: center;
+    padding: 20px 0;
   }
 
   .card {
-    width: 90%;
-    max-width: 370px;
-    height: auto;
-  }
-
-  .logo {
-    font-size: 20px;
-  }
-
-  .logo-icon {
-    width: 28px;
-    height: 28px;
-  }
-}
-
-/* Дополнительная адаптация для очень узких экранов */
-@media (max-width: 480px) {
-  .card {
+    width: 90vw;
+    height: 90vw;
     padding: 15px;
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .avatar {
@@ -195,7 +181,7 @@ h2, .role {
   }
 
   h2, .role {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .icons a img {
@@ -203,6 +189,35 @@ h2, .role {
   }
 
   .typing {
-    font-size: 13px;
+    font-size: 12px;
+    left: 10px;
+    top: 10px;
+    width: calc(100% - 20px);
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .logo-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* ========= 🖥 ПК (от 769px) ========= */
+@media (min-width: 769px) {
+  main {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card {
+    width: 370px;
+    height: 310px;
+  }
+
+  .typing {
+    font-size: 14px;
   }
 }
