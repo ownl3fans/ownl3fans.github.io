@@ -1,4 +1,3 @@
-/* Общие стили */
 * {
   margin: 0;
   padding: 0;
@@ -163,14 +162,13 @@ h2, .role {
   transition: opacity 0.5s ease;
 }
 
-/* Адаптация для планшетов (ширина до 1024px) */
-@media (max-width: 1024px) {
+/* АДАПТАЦИЯ ДЛЯ ПЛАНШЕТОВ */
+@media (max-width: 768px) {
   main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
   }
 
   .card {
@@ -184,7 +182,7 @@ h2, .role {
   }
 
   .logo {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .logo-icon {
@@ -193,18 +191,19 @@ h2, .role {
   }
 }
 
-/* Адаптация для мобильных устройств (ширина до 768px) */
+/* АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ */
 @media (max-width: 480px) {
   main {
     flex-direction: column;
-    gap: 20px;
     align-items: center;
+    gap: 20px;
+    padding: 20px;
   }
 
   .card {
-    width: 95%;
-    max-width: 400px;
+    width: 98%;
     height: auto;
+    max-width: 500px;
   }
 
   .avatar {
